@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import haikuChecker from '../functions/haiku-checker';
+import { Form, Button, Container } from 'react-bootstrap';
 
 function HaikuChecker(){
   const [numberOfSyllables, setNumberOfSyllables] = useState(0);
@@ -28,14 +29,18 @@ function HaikuChecker(){
 
   return(
     <React.Fragment>
-      <form onSubmit={handleHaikuCheckerFormSubmission}>
-        <input
-          type='string'
-          name='haiku'
-          placeholder='please enter only letters and no special characters'/>
-          <button type='submit'>See if you're a Haiku master!</button>
-      </form>
-      <h1>{result}</h1>
+      <Container>
+        <Form onSubmit={handleHaikuCheckerFormSubmission}>
+          <Form.Group>
+            <Form.Control
+              type='string'
+              name='haiku'
+              placeholder='please enter only letters and no special characters'/><br/>
+              <Button type='submit'>See if you're a Haiku master!</Button>
+          </Form.Group>
+        </Form>
+        <h1>{result}</h1>
+      </Container>
     </React.Fragment>
   )
 }
