@@ -1,10 +1,11 @@
 import React from 'react';
-import './App.css';
+import HaikuChecker from './HaikuChecker';
+import './../App.css';
 
 function App() {
   return (
     <React.Fragment>
-      
+      <HaikuChecker />
     </React.Fragment>
   );
 }
