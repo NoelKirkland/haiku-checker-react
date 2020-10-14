@@ -1,5 +1,7 @@
 export default (string, counter = 0) => {
-  if(string === "") {
+  if(!"aeiouyAEIOU".includes(string)){
+    return null;
+  } else if(string === "") {
     return counter;
   } else {
     if (string[1] ==="e" && string[2] ===" " && counter === 0){ //Catches two or three letter words, that are at the very begging of the string, and that end in an e
