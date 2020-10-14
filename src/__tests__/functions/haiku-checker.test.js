@@ -37,4 +37,8 @@ describe('haikuChecker', () => {
   test('should correctly count how many syllables are in a word with a dipthong, one other vowel, and a silent e', () => {
     expect(haikuChecker("Europe")).toEqual(2);
   });
+
+  test('should correctly evaluate how many syllables are in a multi-word string', () => {
+    expect(haikuChecker("first five syllables second seven syllables third five syllables")).toEqual(17);
+  });
 });
