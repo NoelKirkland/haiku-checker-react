@@ -25,4 +25,8 @@ describe('haikuChecker', () => {
   test('should correctly count how many syllables are in a word with multiple dipthongs, no other vowels, and no silent e\'s', () => {
     expect(haikuChecker("sourdough")).toEqual(2);
   });
+
+  test('should correctly count how many syllables are in a word with a dipthong, one other vowel, but no silent e', () => {
+    expect(haikuChecker("goodnight")).toEqual(2);
+  });
 });
