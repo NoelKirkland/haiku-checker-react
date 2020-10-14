@@ -8,73 +8,67 @@ _This application is built to see if an imputed string is in fact a proper haiku
 
 ## Technical Specifications
 
-1. The application should return null if there are any non-alphabetic characters
-
-    | Input | Output  |
-    | :---: | :-----: |
-    | "Age ain't nothing but a #" | null |
-
-2. The application should correctly count how many syllables are in a word with only one vowel but with no diphthongs or silent e's
+1. The application should correctly count how many syllables are in a word with only one vowel but with no diphthongs or silent e's
 
     | Input | Output  |
     | :---: | :-----: |
     | "him" or "her" or "dug" | 1 |
 
-3. The application should correctly count how many syllables are in a word with multiple vowels but with no diphthongs or silent e's
+2. The application should correctly count how many syllables are in a word with multiple vowels but with no diphthongs or silent e's
 
     | Input | Output  |
     | :---: | :-----: |
     | "hello" or "coding" | 2 |
 
-4. The application should correctly count how many syllables are in a word with only one vowel as well as a silent e but no dipthongs
+3. The application should correctly count how many syllables are in a word with only one vowel as well as a silent e but no dipthongs
 
     | Input | Output  |
     | :---: | :-----: |
     | "code" or "hope" | 1 |
 
-5. The application should correctly count how many syllables are in a word with multiple vowels as well as a silent e but no dipthongs
+4. The application should correctly count how many syllables are in a word with multiple vowels as well as a silent e but no dipthongs
 
     | Input | Output  |
     | :---: | :-----: |
     | "preface" or "complete" | 2 |
 
-6. The application should correctly count how many syllables are in a word with a diphthong, no other vowels, and no silent e's
+5. The application should correctly count how many syllables are in a word with a diphthong, no other vowels, and no silent e's
 
     | Input | Output  |
     | :---: | :-----: |
     | "boil" or "deer" or "stairs" | 1 |
 
-7. The application should correctly count how many syllables are in a word with multiple dipthongs, no other vowels, and no silent e's
+6. The application should correctly count how many syllables are in a word with multiple dipthongs, no other vowels, and no silent e's
 
     | Input | Output  |
     | :---: | :-----: |
     | "sourdough" | 2 |
 
-8. The application should correctly count how many syllables are in a word with a dipthong, one other vowel, but no silent e
+7. The application should correctly count how many syllables are in a word with a dipthong, one other vowel, but no silent e
 
     | Input | Output  |
     | :---: | :-----: |
     | "although" or "Haiku" or "goodnight" or "today" | 2 |
 
-9. The application should correctly count how many syllables are in a word with a dipthong, multiple other vowels, but no silent e
+8. The application should correctly count how many syllables are in a word with a dipthong, multiple other vowels, but no silent e
 
     | Input | Output  |
     | :---: | :-----: |
     | "audubon" or "brouhaha" | 3 |
 
-10. The application should correctly count how many syllables are in a word with a dipthong, one other vowel, and a silent e
+9. The application should correctly count how many syllables are in a word with a dipthong, one other vowel, and a silent e
 
     | Input | Output  |
     | :---: | :-----: |
     | "goodbye" or "crackhouse" or "Europe" | 2 |
 
-11. The application should correctly count how many syllables are in a word with a dipthong, multiple other vowels, and a silent e
+10. The application should correctly count how many syllables are in a word with a dipthong, multiple other vowels, and a silent e
 
     | Input | Output  |
     | :---: | :-----: |
     | ***can't think of any*** | ? |
 
-12. The application should correctly evaluate how many syllables are in a multi-word string
+11. The application should correctly evaluate how many syllables are in a multi-word string
 
     | Input | Output  |
     | :---: | :-----: |
