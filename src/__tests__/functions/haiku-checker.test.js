@@ -17,4 +17,8 @@ describe('haikuChecker', () => {
   test('should correctly count how many syllables are in a word with multiple vowels as well as a silent e but no dipthongs', () => {
     expect(haikuChecker("complete")).toEqual(2);
   });
+
+  test('should correctly count how many syllables are in a word with a diphthong, no other vowels, and no silent e\'s', () => {
+    expect(haikuChecker("deer")).toEqual(1);
+  });
 });
