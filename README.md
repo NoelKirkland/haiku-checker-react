@@ -1,68 +1,121 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Haiku Checker
 
-## Available Scripts
+#### By Noel R. Kirkland - 10/14/2020
 
-In the project directory, you can run:
+## Description
 
-### `npm start`
+_This application is built to see if an imputed string is in fact a proper haiku. A haiku is a Japanese poem of seventeen syllables, in three lines of five, seven, and five. The application will either congratulate you on writing a perfect haiku or it will tell you how many syllables off your poem is._
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Technical Specifications
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+1. The application will return null if there are any non-alphabetic characters
 
-### `npm test`
+    | Input | Output  |
+    | :---: | :-----: |
+    | "Age ain't nothing but a #" | null |
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. The application will correctly count how many syllables are in a word with only one vowel but with no diphthongs or silent e's
 
-### `npm run build`
+    | Input | Output  |
+    | :---: | :-----: |
+    | "him" or "her" or "dug" | 1 |
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. The application will correctly count how many syllables are in a word with multiple vowels but with no diphthongs or silent e's
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+    | Input | Output  |
+    | :---: | :-----: |
+    | "hello" or "coding" | 2 |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. The application will correctly count how many syllables are in a word with only one vowel as well as a silent e but no dipthongs
 
-### `npm run eject`
+    | Input | Output  |
+    | :---: | :-----: |
+    | "code" or "hope" | 1 |
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+5. The application will correctly count how many syllables are in a word with multiple vowels as well as a silent e but no dipthongs
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    | Input | Output  |
+    | :---: | :-----: |
+    | "preface" or "complete" | 2 |
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+6. The application will correctly count how many syllables are in a word with a diphthong, no other vowels, and no silent e's
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+    | Input | Output  |
+    | :---: | :-----: |
+    | "boil" or "deer" or "stairs" | 1 |
 
-## Learn More
+7. The application will correctly count how many syllables are in a word with multiple dipthongs, no other vowels, and no silent e's
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    | Input | Output  |
+    | :---: | :-----: |
+    | "sourdough" | 2 |
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+8. The application will correctly count how many syllables are in a word with a dipthong, one other vowel, but no silent e
 
-### Code Splitting
+    | Input | Output  |
+    | :---: | :-----: |
+    | "although" or "Haiku" or "goodnight" or "today" | 2 |
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+9. The application will correctly count how many syllables are in a word with a dipthong, multiple other vowels, but no silent e
 
-### Analyzing the Bundle Size
+    | Input | Output  |
+    | :---: | :-----: |
+    | "audubon" or "brouhaha" | 3 |
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+10. The application will correctly count how many syllables are in a word with a dipthong, one other vowel, and a silent e
 
-### Making a Progressive Web App
+    | Input | Output  |
+    | :---: | :-----: |
+    | "goodbye" or "crackhouse" or "Europe" | 2 |
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+11. The application will correctly count how many syllables are in a word with a dipthong, multiple other vowels, and a silent e
 
-### Advanced Configuration
+    | Input | Output  |
+    | :---: | :-----: |
+    | ***can't think of any*** | ? |
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+12. The application will correctly evaluate how many syllables are in a multi-word string
 
-### Deployment
+    | Input | Output  |
+    | :---: | :-----: |
+    | "first five syllables second seven syllables third five syllables" | 17 |
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
 
-### `npm run build` fails to minify
+## Setup/Installation Requirements
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+* Download from GitHub
+  1. _Open the following web address in your browser:
+`https://github.com/NoelKirkland`_
+  2. _Click on the button labeled_ Repositories
+  3. _Navigate into the `haiku-checker-react` repository and click the green button labeled_ Clone or download.
+
+* Download by Cloning
+  1. _Open the following web address in your browser:
+`https://github.com/NoelKirkland`_
+  2. _Click on the button labeled_ Repositories
+  3. _Navigate into the `haiku-checker-react` and click the green button labeled_ Clone or download.
+
+* Open and Run Application
+  1. _Open the downloaded application in a text editor ([V.S. Code preferred](https://code.visualstudio.com/))_
+  2. _Open a new terminal in your text editor (Ctrl+\` in V.S. Code) and run command `> npm install`_
+  3. _Start the local server by running the command `> npm start`_
+  4. _Visit the address http://localhost:3000/ in your preferred browser_
+  5. _Have fun!_
+
+## Known Bugs
+
+_The recursive haiku checker function is about %95 accurate but there are some words in the english language that have an anomalous syllable count in which the function does not account for._
+
+## Support and contact details
+
+_If you run into any problems, or have any questions at all, feel free to reach out to me at noelkirkland@gmail.com_
+
+## Technologies Used
+
+_This webpage was constructed using HTML & CSS, JavaScript, and REACT_
+
+### License
+
+_`*` This project uses the following license: [MIT](https://opensource.org/licenses/MIT)_
+
+_Intellectual property of Noel R. Kirkland - 2020_
